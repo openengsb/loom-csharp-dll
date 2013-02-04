@@ -78,13 +78,13 @@
           <requireLicenseAcceptance>false</requireLicenseAcceptance>
           <releaseNotes>Release the .Net Bridge</releaseNotes>
           <copyright>OpenEngSB 2012</copyright>
-          <wsdl_locations>
-            <wsdl_location>${project.build.directory}/ExampleDomain.wsdl</wsdl_location>
-            <wsdl_location>${project.build.directory}/ExampleDomainEvents.wsdl</wsdl_location>
-          </wsdl_locations>
+          <wsdlLocations>
+            <wsdlLocation>${project.build.directory}/ExampleDomain.wsdl</wsdlLocation>
+            <wsdlLocation>${project.build.directory}/ExampleDomainEvents.wsdl</wsdlLocation>
+          </wsdlLocations>
           <namespace>ExampleDomain</namespace>
           <targetVersion>${project.version}</targetVersion>
-          <nuget_folder>${project.build.directory}/nuget/</nuget_folder>
+          <nugetFolder>${project.build.directory}/nuget/</nugetFolder>
         </configuration>
         <executions>
           <execution>
