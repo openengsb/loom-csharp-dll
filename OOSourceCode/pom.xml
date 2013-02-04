@@ -25,11 +25,11 @@
   </parent>
 
   <groupId>org.openengsb.loom.csharp.common.bridge</groupId>
-  <artifactId>OpenEngSBCore</artifactId>
+  <artifactId>OOSourceCode</artifactId>
   <packaging>pom</packaging>
 
-  <name>OpenEngSB :: Loom :: CSharp :: Common :: Bridge :: Convert :: WSDL :: OpenEngSBCore</name>
-  <description>Compile OpenEngSBCore wsdl to dll</description>
+  <name>OpenEngSB :: Loom :: CSharp :: Common :: Bridge :: Convert :: WSDL :: OOSourceCode</name>
+  <description>Compile OOSourceCode wsdl to dll</description>
 
   <build>
     <plugins>
@@ -46,40 +46,22 @@
             <configuration>
               <artifactItems>
                 <artifactItem>
-                  <groupId>org.openengsb.framework</groupId>
-                  <artifactId>org.openengsb.framework.api</artifactId>
-                  <classifier>ConnectorManager</classifier>
+                  <groupId>org.openengsb.domain</groupId>
+                  <artifactId>org.openengsb.domain.OOSourceCode</artifactId>
+                  <classifier>OOSourceCodeDomain</classifier>
                   <type>wsdl</type>
                   <overWrite>false</overWrite>
                   <outputDirectory>${project.build.directory}</outputDirectory>
-                  <destFileName>ConnectorManager.wsdl</destFileName>
+                  <destFileName>OOSourceCodeDomain.wsdl</destFileName>
                 </artifactItem>
                 <artifactItem>
-                  <groupId>org.openengsb.framework</groupId>
-                  <artifactId>org.openengsb.framework.api</artifactId>
-                  <classifier>ProxyConnectorRegistry</classifier>
+                  <groupId>org.openengsb.domain</groupId>
+                  <artifactId>org.openengsb.domain.OOSourceCode</artifactId>
+                  <classifier>OOSourceCodeDomainEvents</classifier>
                   <type>wsdl</type>
                   <overWrite>false</overWrite>
                   <outputDirectory>${project.build.directory}</outputDirectory>
-                  <destFileName>ProxyConnectorRegistry.wsdl</destFileName>
-                </artifactItem>
-                <artifactItem>
-                  <groupId>org.openengsb.framework</groupId>
-                  <artifactId>org.openengsb.framework.api</artifactId>
-                  <classifier>LinkingSupport</classifier>
-                  <type>wsdl</type>
-                  <overWrite>false</overWrite>
-                  <outputDirectory>${project.build.directory}</outputDirectory>
-                  <destFileName>LinkingSupport.wsdl</destFileName>
-                </artifactItem>
-                <artifactItem>
-                  <groupId>org.openengsb.framework</groupId>
-                  <artifactId>org.openengsb.framework.api</artifactId>
-                  <classifier>EventSupport</classifier>
-                  <type>wsdl</type>
-                  <overWrite>false</overWrite>
-                  <outputDirectory>${project.build.directory}</outputDirectory>
-                  <destFileName>EventSupport.wsdl</destFileName>
+                  <destFileName>OOSourceCodeDomainEvents.wsdl</destFileName>
                 </artifactItem>
               </artifactItems>
             </configuration>
@@ -97,14 +79,12 @@
           <releaseNotes>Release the .Net Bridge</releaseNotes>
           <copyright>OpenEngSB 2012</copyright>
           <wsdlLocations>
-            <wsdlLocation>${project.build.directory}/ConnectorManager.wsdl</wsdlLocation>
-            <wsdlLocation>${project.build.directory}/ProxyConnectorRegistry.wsdl</wsdlLocation>
-            <wsdlLocation>${project.build.directory}/LinkingSupport.wsdl</wsdlLocation>
-            <wsdlLocation>${project.build.directory}/EventSupport.wsdl</wsdlLocation>
+            <wsdlLocation>${project.build.directory}/OOSourceCodeDomain.wsdl</wsdlLocation>
+            <wsdlLocation>${project.build.directory}/OOSourceCodeDomainEvents.wsdl</wsdlLocation>
           </wsdlLocations>
-          <namespace>OpenEngSBCore</namespace>
-          <nugetFolder>${project.build.directory}/nuget/</nugetFolder>
+          <namespace>OOSourceCodeDomain</namespace>
           <targetVersion>${project.version}</targetVersion>
+          <nugetFolder>${project.build.directory}/nuget/</nugetFolder>
         </configuration>
         <executions>
           <execution>
@@ -128,7 +108,7 @@
             <configuration>
               <artifacts>
                 <artifact>
-                  <file>target/OpenEngSBCore.dll</file>
+                  <file>target/OOSourceCodeDomain.dll</file>
                   <type>dll</type>
                 </artifact>
               </artifacts>
@@ -138,10 +118,4 @@
       </plugin>
     </plugins>
   </build>
-  <dependencies>
-    <dependency>
-      <groupId>org.openengsb.framework</groupId>
-      <artifactId>org.openengsb.framework.api</artifactId>
-    </dependency>
-  </dependencies>
 </project>
