@@ -43,6 +43,7 @@
   <modules>
     <module>ExampleDomain</module>
     <module>OpenEngSBCore</module>
+	<module>OOSourceCode</module>
   </modules>
 
   <dependencyManagement>
@@ -55,6 +56,11 @@
       <dependency>
         <groupId>org.openengsb.domain</groupId>
         <artifactId>org.openengsb.domain.example</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.openengsb.domain</groupId>
+        <artifactId>org.openengsb.domain.OOSourceCode</artifactId>
         <version>${project.version}</version>
       </dependency>
     </dependencies>
