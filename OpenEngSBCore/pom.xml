@@ -81,6 +81,15 @@
                   <outputDirectory>${project.build.directory}</outputDirectory>
                   <destFileName>EventSupport.wsdl</destFileName>
                 </artifactItem>
+               <artifactItem>
+                  <groupId>org.openengsb.framework</groupId>
+                  <artifactId>org.openengsb.framework.api</artifactId>
+                  <classifier>OpenEngSBModel</classifier>
+                  <type>wsdl</type>
+                  <overWrite>false</overWrite>
+                  <outputDirectory>${project.build.directory}</outputDirectory>
+                  <destFileName>OpenEngSBModel.wsdl</destFileName>
+                </artifactItem>
               </artifactItems>
             </configuration>
           </execution>
@@ -101,6 +110,7 @@
             <wsdlLocation>${project.build.directory}/ProxyConnectorRegistry.wsdl</wsdlLocation>
             <wsdlLocation>${project.build.directory}/LinkingSupport.wsdl</wsdlLocation>
             <wsdlLocation>${project.build.directory}/EventSupport.wsdl</wsdlLocation>
+            <wsdlLocation>${project.build.directory}/OpenEngSBModel.wsdl</wsdlLocation>
           </wsdlLocations>
           <namespace>OpenEngSBCore</namespace>
           <nugetFolder>${project.build.directory}/nuget/</nugetFolder>
