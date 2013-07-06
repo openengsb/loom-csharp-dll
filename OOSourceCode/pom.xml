@@ -85,6 +85,7 @@
           <namespace>OOSourceCodeDomain</namespace>
           <targetVersion>${project.version}</targetVersion>
           <nugetFolder>${project.build.directory}/nuget/</nugetFolder>
+          <outputDirectory>${project.build.directory}</outputDirectory>
         </configuration>
         <executions>
           <execution>

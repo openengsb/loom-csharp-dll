@@ -114,6 +114,7 @@
           </wsdlLocations>
           <namespace>OpenEngSBCore</namespace>
           <nugetFolder>${project.build.directory}/nuget/</nugetFolder>
+          <outputDirectory>${project.build.directory}</outputDirectory>
           <targetVersion>${project.version}</targetVersion>
         </configuration>
         <executions>

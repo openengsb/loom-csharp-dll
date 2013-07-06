@@ -84,6 +84,7 @@
           </wsdlLocations>
           <namespace>ExampleDomain</namespace>
           <targetVersion>${project.version}</targetVersion>
+          <outputDirectory>${project.build.directory}</outputDirectory>
           <nugetFolder>${project.build.directory}/nuget/</nugetFolder>
         </configuration>
         <executions>
